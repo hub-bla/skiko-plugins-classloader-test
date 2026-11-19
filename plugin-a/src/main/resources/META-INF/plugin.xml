@@ -1,0 +1,15 @@
+<idea-plugin>
+    <id>org.example.skiko.a</id>
+    <name>Skiko Test Plugin A</name>
+    <vendor>test</vendor>
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <appStarter id="skikoCheck" implementation="skikotest.a.CheckStarter"/>
+    </extensions>
+    <actions>
+        <action id="skikotest.a.check" class="skikotest.ShowProbeAction" text="Skiko Check (Plugin A)"
+                description="Creates a SkiaLayer with the Skiko bundled in plugin A and shows what it loaded">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
